@@ -91,7 +91,7 @@ function get_net_id {
 function virtual_port_create {
 	port_id="$(ironic port-create \
 	-n "$virt_node_id" \
-	-a "$VIRTUAL_NODE_MAC")"
+	-a "$VIRTUAL_NODE_MAC" | grep ' uuid ' | awk '{print $4}')"
 	echo "Port ID is $port_id"
 }
 
