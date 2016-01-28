@@ -1,7 +1,8 @@
 #! /bin/bash
 
-set -e
+set -v
 
+source ~/openrc
 export OS_USERNAME='demo'
 export OS_PASSWORD='demo'
 export OS_TENANT_NAME='demo'
