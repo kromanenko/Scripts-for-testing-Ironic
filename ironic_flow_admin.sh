@@ -30,7 +30,7 @@ function virtual_img_create {
 	--progress \
 	--property cpu_arch='x86_64' \
 	--property hypervisor_type='baremetal' \
-	--property mos_disk_info='[{"name": "vda", "extra": [], "free_space": 11000, "type": "disk", "id": "vda", "size": 11000, "volumes": [{"mount": "/", "type": "partition", "file_system": "ext4", "size": 10000}]}]'
+	--property fuel_disk_info='[{"name": "vda", "extra": [], "free_space": 11000, "type": "disk", "id": "vda", "size": 11000, "volumes": [{"mount": "/", "type": "partition", "file_system": "ext4", "size": 10000}]}]'
 }
 
 function key_create {
