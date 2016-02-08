@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Setup and run virtual Ironic instance with admin rights
-set -e
+set -ev
 
 # source openrc
 source ~/openrc
