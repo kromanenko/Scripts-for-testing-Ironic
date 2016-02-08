@@ -56,9 +56,11 @@ function get_image_info {
 	kernel_id="$(echo "$OUTPUT" | grep ironic-deploy-linux | awk '{print $2}')"
 	ramdisk_id="$(echo "$OUTPUT" | grep ironic-deploy-initramfs | awk '{print $2}')"
 	squashfs_id="$(echo "$OUTPUT" | grep ironic-deploy-squashfs | awk '{print $2}')"
+	os_image_id="$(echo "$OUTPUT" | grep virtual_trusty_ext4_user | awk '{print $2}')"
 	echo "Kernel image ID is $kernel_id"
 	echo "Ramdisk image ID is $ramdisk_id"
 	echo "Squashfs image ID is $squashfs_id"
+	echo "Operating system image ID is $os_image_id"
 }
 
 function virtual_node_create {
@@ -137,7 +139,7 @@ function records_for_cleanup {
 	echo "| Instance | UbuntuVM |" >> cleanup.txt
 	echo "| Port-ID | $port_id|" >> cleanup.txt
 	echo "| Node-ID | $virt_node_id |" >> cleanup.txt
-	echo "| Image | virtual_trusty_ext4_user |" >> cleanup.txt
+	echo "| Image-ID | $os_image_id |" >> cleanup.txt
 	echo "| Flavor | bm_flavor |" >> cleanup.txt
 }
 
