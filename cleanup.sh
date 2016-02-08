@@ -12,7 +12,7 @@ floating_ip="$(cat cleanup.txt | grep "Floating-IP" | awk '{print $4}')"
 instance="$(cat cleanup.txt | grep "Instance" | awk '{print $4}')"
 port_id="$(cat cleanup.txt | grep "Port-ID" | awk '{print $4}')"
 node_id="$(cat cleanup.txt | grep "Node-ID" | awk '{print $4}')"
-image="$(cat cleanup.txt | grep "Image" | awk '{print $4}')"
+image="$(cat cleanup.txt | grep "Image-ID" | awk '{print $4}')"
 flavor="$(cat cleanup.txt | grep "Flavor" | awk '{print $4}')"
 
 echo $floating_ip
