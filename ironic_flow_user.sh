@@ -1,7 +1,7 @@
 #! /bin/bash
 # This version of script is for non-admin instance booting
 
-set -e
+set -ev
 
 # source openrc
 source ~/openrc
