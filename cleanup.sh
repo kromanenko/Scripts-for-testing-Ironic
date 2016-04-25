@@ -29,8 +29,8 @@ ironic port-delete $port_id
 ironic node-delete $node_id
 glance image-delete $image
 nova flavor-delete $flavor
-keystone user-delete demo
-keystone tenant-delete demo
+openstack user delete demo
+openstack project delete demo
 
 echo "Cleanup done!"
 
